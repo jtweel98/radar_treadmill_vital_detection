@@ -1,0 +1,2196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module ifxRadarSDK</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>ifxRadarSDK</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/pi/Documents/radar_project_v1/ifxRadarSDK.py">/home/pi/Documents/radar_project_v1/ifxRadarSDK.py</a></font></td></tr></table>
+    <p><tt>Python&nbsp;wrapper&nbsp;for&nbsp;Infineon&nbsp;Radar&nbsp;SDK<br>
+&nbsp;<br>
+The&nbsp;package&nbsp;expects&nbsp;the&nbsp;library&nbsp;(radar_sdk.dll&nbsp;on&nbsp;Windows,&nbsp;libradar_sdk.so&nbsp;on<br>
+Linux)&nbsp;either&nbsp;in&nbsp;the&nbsp;same&nbsp;directory&nbsp;as&nbsp;this&nbsp;file&nbsp;(ifxRadarSDK.py)&nbsp;or&nbsp;in&nbsp;a<br>
+subdirectory&nbsp;../../libs/ARCH/&nbsp;relative&nbsp;to&nbsp;this&nbsp;file&nbsp;where&nbsp;ARCH&nbsp;is&nbsp;depending&nbsp;on<br>
+the&nbsp;platform&nbsp;either&nbsp;win32_x86,&nbsp;win32_x64,&nbsp;raspi,&nbsp;or&nbsp;linux_x64.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="platform.html">platform</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#Exception">builtins.Exception</a>(<a href="builtins.html#BaseException">builtins.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKArgumentInvalidError">RadarSDKArgumentInvalidError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKArgumentInvalidExpectedComplexError">RadarSDKArgumentInvalidExpectedComplexError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKArgumentInvalidExpectedRealError">RadarSDKArgumentInvalidExpectedRealError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKArgumentNullError">RadarSDKArgumentNullError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKArgumentOutOfBoundsError">RadarSDKArgumentOutOfBoundsError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKChirpRateOutOfRangeError">RadarSDKChirpRateOutOfRangeError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKCommunicationError">RadarSDKCommunicationError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKDeviceBusyError">RadarSDKDeviceBusyError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKDimensionMismatchError">RadarSDKDimensionMismatchError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKFifoOverflowError">RadarSDKFifoOverflowError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKFrameRateOutOfRangeError">RadarSDKFrameRateOutOfRangeError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKFrameSizeNotSupportedError">RadarSDKFrameSizeNotSupportedError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKIfGainOutOfRangeError">RadarSDKIfGainOutOfRangeError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKIndexOutOfBoundsError">RadarSDKIndexOutOfBoundsError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKInplaceCalculationNotSupportedError">RadarSDKInplaceCalculationNotSupportedError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKMatrixNotPositiveDefinitieError">RadarSDKMatrixNotPositiveDefinitieError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKMatrixSingularError">RadarSDKMatrixSingularError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKMemoryAllocationFailedError">RadarSDKMemoryAllocationFailedError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKNoDeviceError">RadarSDKNoDeviceError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKNotSupportedError">RadarSDKNotSupportedError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKNumChirpsNotAllowedError">RadarSDKNumChirpsNotAllowedError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKNumSamplesOutOfRangeError">RadarSDKNumSamplesOutOfRangeError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKRfOutOfRangeError">RadarSDKRfOutOfRangeError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKRxAntennaCombinationNotAllowedError">RadarSDKRxAntennaCombinationNotAllowedError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKSamplerateOutOfRangeError">RadarSDKSamplerateOutOfRangeError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKTimeoutError">RadarSDKTimeoutError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKTxAntennaModeNotAllowedError">RadarSDKTxAntennaModeNotAllowedError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#RadarSDKTxPowerOutOfRangeError">RadarSDKTxPowerOutOfRangeError</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#Device">Device</a>
+</font></dt><dt><font face="helvetica, arial"><a href="ifxRadarSDK.html#Frame">Frame</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Device">class <strong>Device</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Device">Device</a>(uuid=None)<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Device-__del__"><strong>__del__</strong></a>(self)</dt><dd><tt>Destroy&nbsp;device&nbsp;handle</tt></dd></dl>
+
+<dl><dt><a name="Device-__init__"><strong>__init__</strong></a>(self, uuid=None)</dt><dd><tt>Create&nbsp;new&nbsp;device<br>
+&nbsp;<br>
+Search&nbsp;for&nbsp;a&nbsp;Infineon&nbsp;radar&nbsp;sensor&nbsp;device&nbsp;connected&nbsp;to&nbsp;the&nbsp;host&nbsp;machine<br>
+and&nbsp;connects&nbsp;to&nbsp;the&nbsp;first&nbsp;found&nbsp;sensor&nbsp;device.<br>
+&nbsp;<br>
+The&nbsp;device&nbsp;is&nbsp;automatically&nbsp;closed&nbsp;by&nbsp;the&nbsp;destructor.&nbsp;If&nbsp;you&nbsp;want&nbsp;to<br>
+close&nbsp;the&nbsp;device&nbsp;yourself,&nbsp;you&nbsp;can&nbsp;use&nbsp;the&nbsp;keyword&nbsp;del:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;device&nbsp;=&nbsp;<a href="#Device">Device</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;do&nbsp;something&nbsp;with&nbsp;device<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;close&nbsp;device<br>
+&nbsp;&nbsp;&nbsp;&nbsp;del&nbsp;device<br>
+&nbsp;<br>
+Optional&nbsp;parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;uuid:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open&nbsp;the&nbsp;radar&nbsp;device&nbsp;with&nbsp;unique&nbsp;id&nbsp;given&nbsp;by&nbsp;uuid<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;uuid&nbsp;is&nbsp;represented&nbsp;as&nbsp;a&nbsp;32&nbsp;character&nbsp;string&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hexadecimal&nbsp;characters.&nbsp;In&nbsp;addition,&nbsp;the&nbsp;uuid&nbsp;may<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contain&nbsp;dash&nbsp;characters&nbsp;(-)&nbsp;which&nbsp;will&nbsp;be&nbsp;ignored.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Both&nbsp;examples&nbsp;are&nbsp;valid&nbsp;and&nbsp;correspond&nbsp;to&nbsp;the&nbsp;same<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uuid:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0123456789abcdef0123456789abcdef<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01234567-89ab-cdef-0123-456789abcdef</tt></dd></dl>
+
+<dl><dt><a name="Device-create_frame_from_device_handle"><strong>create_frame_from_device_handle</strong></a>(self)</dt><dd><tt>Create&nbsp;frame&nbsp;for&nbsp;time&nbsp;domain&nbsp;data&nbsp;acquisition<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;checks&nbsp;the&nbsp;current&nbsp;configuration&nbsp;of&nbsp;the&nbsp;specified&nbsp;sensor<br>
+device&nbsp;and&nbsp;initializes&nbsp;a&nbsp;data&nbsp;structure&nbsp;that&nbsp;can&nbsp;hold&nbsp;a&nbsp;time&nbsp;domain<br>
+data&nbsp;frame&nbsp;according&nbsp;acquired&nbsp;through&nbsp;that&nbsp;device.</tt></dd></dl>
+
+<dl><dt><a name="Device-get_next_frame"><strong>get_next_frame</strong></a>(self, frame)</dt><dd><tt>Retrieve&nbsp;next&nbsp;frame&nbsp;of&nbsp;time&nbsp;domain&nbsp;data&nbsp;from&nbsp;device<br>
+&nbsp;<br>
+Retrieve&nbsp;the&nbsp;next&nbsp;complete&nbsp;frame&nbsp;of&nbsp;time&nbsp;domain&nbsp;data&nbsp;from&nbsp;the&nbsp;connected<br>
+device.&nbsp;The&nbsp;samples&nbsp;from&nbsp;all&nbsp;chirps&nbsp;and&nbsp;all&nbsp;enabled&nbsp;RX&nbsp;antennas&nbsp;will&nbsp;be<br>
+copied&nbsp;to&nbsp;the&nbsp;provided&nbsp;data&nbsp;structure&nbsp;frame.</tt></dd></dl>
+
+<dl><dt><a name="Device-get_shield_uuid"><strong>get_shield_uuid</strong></a>(self)</dt><dd><tt>Get&nbsp;the&nbsp;unique&nbsp;id&nbsp;for&nbsp;the&nbsp;radar&nbsp;shield</tt></dd></dl>
+
+<dl><dt><a name="Device-set_config"><strong>set_config</strong></a>(self, num_samples_per_chirp=64, num_chirps_per_frame=32, adc_samplerate_Hz=2000000, frame_period_us=0, lower_frequency_kHz=58000000, upper_frequency_kHz=63000000, bgt_tx_power=31, rx_antenna_mask=7, tx_mode=0, chirp_to_chirp_time_100ps=1870000, if_gain_dB=33, frame_end_delay_100ps=400000000, shape_end_delay_100ps=1500000)</dt><dd><tt>Configure&nbsp;device&nbsp;and&nbsp;start&nbsp;acquisition&nbsp;of&nbsp;time&nbsp;domain&nbsp;data<br>
+&nbsp;<br>
+The&nbsp;board&nbsp;is&nbsp;configured&nbsp;according&nbsp;to&nbsp;the&nbsp;parameters&nbsp;provided<br>
+through&nbsp;config&nbsp;and&nbsp;acquisition&nbsp;of&nbsp;time&nbsp;domain&nbsp;data&nbsp;is&nbsp;started.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num_samples_per_chirp:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;number&nbsp;of&nbsp;samples&nbsp;acquired&nbsp;during&nbsp;each&nbsp;chirp&nbsp;of&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frame.&nbsp;The&nbsp;duration&nbsp;of&nbsp;a&nbsp;single&nbsp;chirp&nbsp;depends&nbsp;on&nbsp;the&nbsp;number&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;samples&nbsp;and&nbsp;the&nbsp;sampling&nbsp;rate.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num_chirps_per_frame:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;number&nbsp;of&nbsp;chirps&nbsp;a&nbsp;single&nbsp;data&nbsp;frame&nbsp;consists&nbsp;of.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;adc_samplerate_Hz:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;sampling&nbsp;rate&nbsp;of&nbsp;the&nbsp;ADC&nbsp;used&nbsp;to&nbsp;acquire&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;samples&nbsp;during&nbsp;a&nbsp;chirp.&nbsp;The&nbsp;duration&nbsp;of&nbsp;a&nbsp;single&nbsp;chirp&nbsp;depends<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;the&nbsp;number&nbsp;of&nbsp;samples&nbsp;and&nbsp;the&nbsp;sampling&nbsp;rate.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;frame_period_us:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;time&nbsp;period&nbsp;that&nbsp;elapses&nbsp;between&nbsp;the&nbsp;beginnings&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two&nbsp;consecutive&nbsp;frames.&nbsp;The&nbsp;reciprocal&nbsp;of&nbsp;this&nbsp;parameter&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;frame&nbsp;rate.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower_frequency_kHz:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;start&nbsp;frequency&nbsp;of&nbsp;the&nbsp;FMCW&nbsp;frequency&nbsp;ramp.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upper_frequency_kHz:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;end&nbsp;frequency&nbsp;of&nbsp;the&nbsp;FMCW&nbsp;frequency&nbsp;ramp.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bgt_tx_power:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;value&nbsp;controls&nbsp;the&nbsp;power&nbsp;of&nbsp;the&nbsp;transmitted&nbsp;RX&nbsp;signal.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;an&nbsp;abstract&nbsp;value&nbsp;between&nbsp;0&nbsp;and&nbsp;31&nbsp;without&nbsp;any<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physical&nbsp;meaning.&nbsp;Refer&nbsp;to&nbsp;BGT60TR13AIP&nbsp;data&nbsp;sheet&nbsp;do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;learn&nbsp;more&nbsp;about&nbsp;the&nbsp;TX&nbsp;power&nbsp;BGT60TR13AIP&nbsp;is&nbsp;capable&nbsp;of.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rx_antenna_mask:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;this&nbsp;mask&nbsp;each&nbsp;bit&nbsp;represents&nbsp;one&nbsp;RX&nbsp;antenna&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BGT60TR13AIP.&nbsp;If&nbsp;a&nbsp;bit&nbsp;is&nbsp;set&nbsp;the&nbsp;according&nbsp;RX&nbsp;antenna&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enabled&nbsp;during&nbsp;the&nbsp;chirps&nbsp;and&nbsp;the&nbsp;signal&nbsp;received&nbsp;through&nbsp;that<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;antenna&nbsp;is&nbsp;captured.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tx_mode:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;relevant&nbsp;only&nbsp;for&nbsp;devices&nbsp;with&nbsp;2&nbsp;TX&nbsp;antennas.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(BGT60ATR24C).&nbsp;For&nbsp;BGT60TR13AIP&nbsp;this&nbsp;value&nbsp;should&nbsp;be&nbsp;0&nbsp;(also&nbsp;default)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Possible&nbsp;values&nbsp;are<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;-&gt;&nbsp;only&nbsp;Tx&nbsp;1&nbsp;is&nbsp;transmitting&nbsp;for&nbsp;all&nbsp;chirps&nbsp;(Default)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;-&gt;&nbsp;only&nbsp;Tx&nbsp;2&nbsp;is&nbsp;transmitting&nbsp;for&nbsp;all&nbsp;chirps<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;-&gt;&nbsp;Time-division&nbsp;multiplex,&nbsp;alternating&nbsp;between&nbsp;Tx&nbsp;1&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tx&nbsp;2&nbsp;on&nbsp;each&nbsp;transmitted&nbsp;chirp&nbsp;(only&nbsp;BGT60ATR24C)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;chirp_to_chirp_time_100ps:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;time&nbsp;period&nbsp;that&nbsp;elapses&nbsp;between&nbsp;the&nbsp;beginnings&nbsp;of&nbsp;two<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consecutive&nbsp;chirps&nbsp;in&nbsp;a&nbsp;frame.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if_gain_dB:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;amplification&nbsp;factor&nbsp;that&nbsp;is&nbsp;applied&nbsp;to&nbsp;the&nbsp;IF&nbsp;signal<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coming&nbsp;from&nbsp;the&nbsp;RF&nbsp;mixer&nbsp;before&nbsp;it&nbsp;is&nbsp;fed&nbsp;into&nbsp;the&nbsp;ADC.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;frame_end_delay_100ps:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;parameter&nbsp;defines&nbsp;the&nbsp;delay&nbsp;after&nbsp;each&nbsp;frame&nbsp;in&nbsp;100<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;picoseconds&nbsp;steps.&nbsp;In&nbsp;order&nbsp;to&nbsp;set&nbsp;this&nbsp;value&nbsp;frame_period_us&nbsp;must<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be&nbsp;set&nbsp;to&nbsp;0,&nbsp;otherwise&nbsp;this&nbsp;value&nbsp;will&nbsp;be&nbsp;ignored.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;shape_end_delay_100ps:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;parameter&nbsp;defines&nbsp;the&nbsp;delay&nbsp;after&nbsp;each&nbsp;shape&nbsp;in&nbsp;100<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;picoseconds&nbsp;steps.&nbsp;In&nbsp;order&nbsp;to&nbsp;set&nbsp;this&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chirp_to_chirp_time_100ps&nbsp;must&nbsp;be&nbsp;set&nbsp;to&nbsp;0,&nbsp;otherwise&nbsp;this&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;be&nbsp;ignored.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Frame">class <strong>Frame</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Frame">Frame</a>(num_antennas,&nbsp;num_chirps_per_frame,&nbsp;num_samples_per_chirp)<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Frame-__del__"><strong>__del__</strong></a>(self)</dt><dd><tt>Destroy&nbsp;frame&nbsp;handle</tt></dd></dl>
+
+<dl><dt><a name="Frame-__init__"><strong>__init__</strong></a>(self, num_antennas, num_chirps_per_frame, num_samples_per_chirp)</dt><dd><tt>Create&nbsp;frame&nbsp;for&nbsp;time&nbsp;domain&nbsp;data&nbsp;acquisition<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;initializes&nbsp;a&nbsp;data&nbsp;structure&nbsp;that&nbsp;can&nbsp;hold&nbsp;a&nbsp;time&nbsp;domain<br>
+data&nbsp;frame&nbsp;according&nbsp;to&nbsp;the&nbsp;dimensions&nbsp;provided&nbsp;as&nbsp;parameters.<br>
+&nbsp;<br>
+If&nbsp;a&nbsp;device&nbsp;is&nbsp;connected&nbsp;then&nbsp;the&nbsp;method&nbsp;<a href="#Device">Device</a>.create_frame_from_device_handle<br>
+can&nbsp;be&nbsp;used&nbsp;instead&nbsp;of&nbsp;this&nbsp;function,&nbsp;as&nbsp;that&nbsp;function&nbsp;reads&nbsp;the<br>
+dimensions&nbsp;from&nbsp;configured&nbsp;the&nbsp;device&nbsp;handle.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num_antennas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;virtual&nbsp;active&nbsp;Rx&nbsp;antennas&nbsp;configured&nbsp;in&nbsp;the&nbsp;device<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num_chirps_per_frame&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;chirps&nbsp;configured&nbsp;in&nbsp;a&nbsp;frame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num_samples_per_chirp&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;chirps&nbsp;configured&nbsp;in&nbsp;a&nbsp;frame</tt></dd></dl>
+
+<dl><dt><a name="Frame-get_mat_from_antenna"><strong>get_mat_from_antenna</strong></a>(self, antenna, copy=True)</dt><dd><tt>Get&nbsp;matrix&nbsp;from&nbsp;antenna<br>
+&nbsp;<br>
+If&nbsp;copy&nbsp;is&nbsp;True,&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;original&nbsp;matrix&nbsp;is&nbsp;returned.&nbsp;If&nbsp;copy&nbsp;is<br>
+False,&nbsp;the&nbsp;matrix&nbsp;is&nbsp;not&nbsp;copied&nbsp;and&nbsp;the&nbsp;matrix&nbsp;must&nbsp;*not*&nbsp;be&nbsp;used&nbsp;after<br>
+the&nbsp;frame&nbsp;<a href="builtins.html#object">object</a>&nbsp;has&nbsp;been&nbsp;destroyed.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;antenna&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;antenna<br>
+&nbsp;&nbsp;&nbsp;&nbsp;copy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;True&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;matrix&nbsp;will&nbsp;be&nbsp;returned</tt></dd></dl>
+
+<dl><dt><a name="Frame-get_num_rx"><strong>get_num_rx</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;virtual&nbsp;active&nbsp;Rx&nbsp;antennas&nbsp;in&nbsp;the&nbsp;radar&nbsp;device</tt></dd></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="Frame-create_from_pointer"><strong>create_from_pointer</strong></a>(framepointer)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;<a href="#Frame">Frame</a>&nbsp;from&nbsp;FramePointer</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKArgumentInvalidError">class <strong>RadarSDKArgumentInvalidError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>argument&nbsp;is&nbsp;invalid&nbsp;(IFX_ERROR_ARGUMENT_INVALID)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKArgumentInvalidError">RadarSDKArgumentInvalidError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKArgumentInvalidError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKArgumentInvalidExpectedComplexError">class <strong>RadarSDKArgumentInvalidExpectedComplexError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>argument&nbsp;is&nbsp;expected&nbsp;to&nbsp;be&nbsp;complex&nbsp;(IFX_ERROR_ARGUMENT_INVALID_EXPECTED_COMPLEX)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKArgumentInvalidExpectedComplexError">RadarSDKArgumentInvalidExpectedComplexError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedComplexError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKArgumentInvalidExpectedComplexError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKArgumentInvalidExpectedRealError">class <strong>RadarSDKArgumentInvalidExpectedRealError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>argument&nbsp;is&nbsp;expected&nbsp;to&nbsp;be&nbsp;real&nbsp;(IFX_ERROR_ARGUMENT_INVALID_EXPECTED_REAL)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKArgumentInvalidExpectedRealError">RadarSDKArgumentInvalidExpectedRealError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKArgumentInvalidExpectedRealError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKArgumentInvalidExpectedRealError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKArgumentNullError">class <strong>RadarSDKArgumentNullError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>argument&nbsp;is&nbsp;NULL&nbsp;(IFX_ERROR_ARGUMENT_NULL)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKArgumentNullError">RadarSDKArgumentNullError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKArgumentNullError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKArgumentNullError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKArgumentNullError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKArgumentNullError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentNullError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentNullError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentNullError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentNullError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentNullError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKArgumentNullError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKArgumentNullError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKArgumentOutOfBoundsError">class <strong>RadarSDKArgumentOutOfBoundsError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>argument&nbsp;is&nbsp;out&nbsp;of&nbsp;bounds&nbsp;(IFX_ERROR_ARGUMENT_OUT_OF_BOUNDS)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKArgumentOutOfBoundsError">RadarSDKArgumentOutOfBoundsError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKArgumentOutOfBoundsError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKArgumentOutOfBoundsError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKChirpRateOutOfRangeError">class <strong>RadarSDKChirpRateOutOfRangeError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>requested&nbsp;chirp-to-chirp&nbsp;time&nbsp;cannot&nbsp;be&nbsp;applied&nbsp;(IFX_ERROR_CHIRP_RATE_OUT_OF_RANGE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKChirpRateOutOfRangeError">RadarSDKChirpRateOutOfRangeError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKChirpRateOutOfRangeError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKChirpRateOutOfRangeError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKCommunicationError">class <strong>RadarSDKCommunicationError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>communication&nbsp;error&nbsp;between&nbsp;host&nbsp;and&nbsp;radar&nbsp;device&nbsp;(IFX_ERROR_COMMUNICATION_ERROR)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKCommunicationError">RadarSDKCommunicationError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKCommunicationError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKCommunicationError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKCommunicationError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKCommunicationError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKCommunicationError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKCommunicationError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKCommunicationError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKCommunicationError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKCommunicationError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKCommunicationError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKCommunicationError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKDeviceBusyError">class <strong>RadarSDKDeviceBusyError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>connected&nbsp;device&nbsp;is&nbsp;busy&nbsp;(IFX_ERROR_DEVICE_BUSY)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKDeviceBusyError">RadarSDKDeviceBusyError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKDeviceBusyError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKDeviceBusyError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKDeviceBusyError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKDeviceBusyError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDeviceBusyError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDeviceBusyError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDeviceBusyError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDeviceBusyError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDeviceBusyError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKDeviceBusyError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKDeviceBusyError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKDimensionMismatchError">class <strong>RadarSDKDimensionMismatchError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>dimension&nbsp;mismatch&nbsp;(IFX_ERROR_DIMENSION_MISMATCH)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKDimensionMismatchError">RadarSDKDimensionMismatchError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKDimensionMismatchError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKDimensionMismatchError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKDimensionMismatchError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKDimensionMismatchError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDimensionMismatchError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDimensionMismatchError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDimensionMismatchError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDimensionMismatchError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKDimensionMismatchError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKDimensionMismatchError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKDimensionMismatchError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKError">class <strong>RadarSDKError</strong></a>(<a href="builtins.html#Exception">builtins.Exception</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#RadarSDKError">RadarSDKError</a>(error)<br>
+&nbsp;<br>
+Common&nbsp;base&nbsp;class&nbsp;for&nbsp;all&nbsp;non-exit&nbsp;exceptions.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKError-__init__"><strong>__init__</strong></a>(self, error)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKFifoOverflowError">class <strong>RadarSDKFifoOverflowError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;stopped&nbsp;acquisition&nbsp;of&nbsp;time&nbsp;domain&nbsp;data&nbsp;due&nbsp;to&nbsp;an&nbsp;internal&nbsp;fifo&nbsp;overflow&nbsp;(IFX_ERROR_FIFO_OVERFLOW)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKFifoOverflowError">RadarSDKFifoOverflowError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKFifoOverflowError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKFifoOverflowError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKFifoOverflowError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKFifoOverflowError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFifoOverflowError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFifoOverflowError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFifoOverflowError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFifoOverflowError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFifoOverflowError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKFifoOverflowError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKFifoOverflowError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKFrameRateOutOfRangeError">class <strong>RadarSDKFrameRateOutOfRangeError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>requested&nbsp;frame&nbsp;period&nbsp;cannot&nbsp;be&nbsp;applied&nbsp;(IFX_ERROR_FRAME_RATE_OUT_OF_RANGE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKFrameRateOutOfRangeError">RadarSDKFrameRateOutOfRangeError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKFrameRateOutOfRangeError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKFrameRateOutOfRangeError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKFrameSizeNotSupportedError">class <strong>RadarSDKFrameSizeNotSupportedError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;the&nbsp;frame&nbsp;size&nbsp;(IFX_ERROR_FRAME_SIZE_NOT_SUPPORTED)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKFrameSizeNotSupportedError">RadarSDKFrameSizeNotSupportedError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKFrameSizeNotSupportedError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKFrameSizeNotSupportedError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKIfGainOutOfRangeError">class <strong>RadarSDKIfGainOutOfRangeError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;requested&nbsp;IF&nbsp;gain&nbsp;(IFX_ERROR_IF_GAIN_OUT_OF_RANGE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKIfGainOutOfRangeError">RadarSDKIfGainOutOfRangeError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKIfGainOutOfRangeError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKIfGainOutOfRangeError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKIndexOutOfBoundsError">class <strong>RadarSDKIndexOutOfBoundsError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>index&nbsp;is&nbsp;out&nbsp;of&nbsp;bounds&nbsp;(IFX_ERROR_INDEX_OUT_OF_BOUNDS)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKIndexOutOfBoundsError">RadarSDKIndexOutOfBoundsError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKIndexOutOfBoundsError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKIndexOutOfBoundsError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKInplaceCalculationNotSupportedError">class <strong>RadarSDKInplaceCalculationNotSupportedError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>inplace&nbsp;calculation&nbsp;is&nbsp;not&nbsp;supported&nbsp;(IFX_ERROR_IN_PLACE_CALCULATION_NOT_SUPPORTED)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKInplaceCalculationNotSupportedError">RadarSDKInplaceCalculationNotSupportedError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKInplaceCalculationNotSupportedError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKInplaceCalculationNotSupportedError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKMatrixNotPositiveDefinitieError">class <strong>RadarSDKMatrixNotPositiveDefinitieError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>matrix&nbsp;is&nbsp;not&nbsp;positive&nbsp;definite&nbsp;(IFX_ERROR_MATRIX_NOT_POSITIVE_DEFINITE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKMatrixNotPositiveDefinitieError">RadarSDKMatrixNotPositiveDefinitieError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKMatrixNotPositiveDefinitieError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKMatrixNotPositiveDefinitieError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKMatrixSingularError">class <strong>RadarSDKMatrixSingularError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>matrix&nbsp;is&nbsp;singular&nbsp;(IFX_ERROR_MATRIX_SINGULAR)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKMatrixSingularError">RadarSDKMatrixSingularError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKMatrixSingularError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKMatrixSingularError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKMatrixSingularError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKMatrixSingularError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixSingularError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixSingularError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixSingularError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixSingularError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMatrixSingularError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKMatrixSingularError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKMatrixSingularError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKMemoryAllocationFailedError">class <strong>RadarSDKMemoryAllocationFailedError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>memory&nbsp;allocation&nbsp;failed&nbsp;(IFX_ERROR_MEMORY_ALLOCATION_FAILED)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKMemoryAllocationFailedError">RadarSDKMemoryAllocationFailedError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKMemoryAllocationFailedError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKMemoryAllocationFailedError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKNoDeviceError">class <strong>RadarSDKNoDeviceError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>no&nbsp;compatible&nbsp;radar&nbsp;device&nbsp;found&nbsp;(IFX_ERROR_NO_DEVICE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKNoDeviceError">RadarSDKNoDeviceError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKNoDeviceError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKNoDeviceError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKNoDeviceError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKNoDeviceError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNoDeviceError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNoDeviceError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNoDeviceError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNoDeviceError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNoDeviceError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKNoDeviceError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKNoDeviceError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKNotSupportedError">class <strong>RadarSDKNotSupportedError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>not&nbsp;supported&nbsp;(IFX_ERROR_NOT_SUPPORTED)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKNotSupportedError">RadarSDKNotSupportedError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKNotSupportedError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKNotSupportedError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKNotSupportedError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKNotSupportedError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNotSupportedError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNotSupportedError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNotSupportedError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNotSupportedError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNotSupportedError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKNotSupportedError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKNotSupportedError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKNumChirpsNotAllowedError">class <strong>RadarSDKNumChirpsNotAllowedError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;the&nbsp;requested&nbsp;number&nbsp;of&nbsp;chirps&nbsp;per&nbsp;frame&nbsp;(IFX_ERROR_NUM_CHIRPS_NOT_ALLOWED)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKNumChirpsNotAllowedError">RadarSDKNumChirpsNotAllowedError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKNumChirpsNotAllowedError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKNumChirpsNotAllowedError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKNumSamplesOutOfRangeError">class <strong>RadarSDKNumSamplesOutOfRangeError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;requested&nbsp;number&nbsp;of&nbsp;samples&nbsp;(IFX_ERROR_NUM_SAMPLES_OUT_OF_RANGE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKNumSamplesOutOfRangeError">RadarSDKNumSamplesOutOfRangeError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKNumSamplesOutOfRangeError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKNumSamplesOutOfRangeError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKRfOutOfRangeError">class <strong>RadarSDKRfOutOfRangeError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;requested&nbsp;FMCW&nbsp;start&nbsp;and&nbsp;end&nbsp;frequency&nbsp;(IFX_ERROR_RF_OUT_OF_RANGE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKRfOutOfRangeError">RadarSDKRfOutOfRangeError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRfOutOfRangeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKRfOutOfRangeError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKRfOutOfRangeError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKRxAntennaCombinationNotAllowedError">class <strong>RadarSDKRxAntennaCombinationNotAllowedError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;enabling&nbsp;requested&nbsp;combination&nbsp;of&nbsp;RX&nbsp;antennas&nbsp;(IFX_ERROR_RX_ANTENNA_COMBINATION_NOT_ALLOWED)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKRxAntennaCombinationNotAllowedError">RadarSDKRxAntennaCombinationNotAllowedError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKRxAntennaCombinationNotAllowedError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKRxAntennaCombinationNotAllowedError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKSamplerateOutOfRangeError">class <strong>RadarSDKSamplerateOutOfRangeError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;requested&nbsp;sample&nbsp;rate&nbsp;(IFX_ERROR_SAMPLERATE_OUT_OF_RANGE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKSamplerateOutOfRangeError">RadarSDKSamplerateOutOfRangeError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKSamplerateOutOfRangeError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKSamplerateOutOfRangeError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKTimeoutError">class <strong>RadarSDKTimeoutError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;did&nbsp;not&nbsp;acquire&nbsp;a&nbsp;complete&nbsp;time&nbsp;domain&nbsp;data&nbsp;frame&nbsp;within&nbsp;the&nbsp;expected&nbsp;time&nbsp;(IFX_ERROR_TIMEOUT)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKTimeoutError">RadarSDKTimeoutError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKTimeoutError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKTimeoutError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKTimeoutError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKTimeoutError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTimeoutError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTimeoutError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTimeoutError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTimeoutError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTimeoutError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKTimeoutError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKTimeoutError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKTxAntennaModeNotAllowedError">class <strong>RadarSDKTxAntennaModeNotAllowedError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;the&nbsp;requested&nbsp;mode&nbsp;of&nbsp;TX&nbsp;antennas&nbsp;(IFX_ERROR_TX_ANTENNA_MODE_NOT_ALLOWED)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKTxAntennaModeNotAllowedError">RadarSDKTxAntennaModeNotAllowedError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKTxAntennaModeNotAllowedError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKTxAntennaModeNotAllowedError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RadarSDKTxPowerOutOfRangeError">class <strong>RadarSDKTxPowerOutOfRangeError</strong></a>(<a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>device&nbsp;does&nbsp;not&nbsp;support&nbsp;the&nbsp;requested&nbsp;TX&nbsp;power&nbsp;(IFX_ERROR_TX_POWER_OUT_OF_RANGE)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ifxRadarSDK.html#RadarSDKTxPowerOutOfRangeError">RadarSDKTxPowerOutOfRangeError</a></dd>
+<dd><a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Create&nbsp;new&nbsp;RadarSDKException&nbsp;with&nbsp;error&nbsp;code&nbsp;given&nbsp;by&nbsp;error</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ifxRadarSDK.html#RadarSDKError">RadarSDKError</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RadarSDKTxPowerOutOfRangeError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#RadarSDKTxPowerOutOfRangeError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-error_clear"><strong>error_clear</strong></a>()</dt><dd><tt>Clear&nbsp;SDK&nbsp;error</tt></dd></dl>
+ <dl><dt><a name="-error_get"><strong>error_get</strong></a>()</dt><dd><tt>Get&nbsp;last&nbsp;SDK&nbsp;error</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__all__</strong> = ['sdk_version', 'sdk_min_version', 'error_get', 'error_clear', 'Frame', 'Device', 'RadarSDKError', 'RadarSDKArgumentNullError', 'RadarSDKArgumentInvalidError', 'RadarSDKArgumentOutOfBoundsError', 'RadarSDKArgumentInvalidExpectedRealError', 'RadarSDKArgumentInvalidExpectedComplexError', 'RadarSDKIndexOutOfBoundsError', 'RadarSDKDimensionMismatchError', 'RadarSDKMemoryAllocationFailedError', 'RadarSDKInplaceCalculationNotSupportedError', 'RadarSDKMatrixSingularError', 'RadarSDKMatrixNotPositiveDefinitieError', 'RadarSDKNotSupportedError', 'RadarSDKNoDeviceError', ...]<br>
+<strong>sdk_min_version</strong> = '1.1.1'<br>
+<strong>sdk_version</strong> = None</td></tr></table>
+</body></html>
