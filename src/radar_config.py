@@ -1,4 +1,4 @@
-from tools import highest_power_of_two, C
+from radar_tools import highest_power_of_two, C
 
 class RadarMetrics:
 
@@ -49,7 +49,7 @@ class RadarMetrics:
         self.frame_rate = frame_rate or 32 # Hz (I think)
         self.adc_sample_rate_hz = adc_sample_rate_hz or 1000000 # 1,000,000 Hz
         self.bgt_tx_power = bgt_tx_power or 31
-        self.rx_antenna_number = rx_antenna_number or self.RX_1
+        self.rx_antenna_number = rx_antenna_number or self.RX_2
         self.if_gain_db = if_gain_db or 33
         self.center_frequency = center_frequency or 60500000000 # 60,500,000,000 Hz
 
@@ -79,7 +79,6 @@ class RadarMetrics:
         '''
         num_chirps_per_frame = int(2.0 * self.max_speed / self.speed_resolution)
         return highest_power_of_two(num_chirps_per_frame)
-
 
     @property
     def num_samples_per_chirp(self):
@@ -115,7 +114,7 @@ class RadarMetrics:
     
     @property
     def chirp_length(self):
-        return self.num_samples_per_chirp * self.adc_sample_rate_hz
+        return self.num_samples_per_chirp / self.adc_sample_rate_hz
 
     @property
     def chirp_slope(self):
@@ -140,3 +139,49 @@ class RadarMetrics:
     @property
     def config_dict(self):
         return self.__config
+
+    def __str__(self):
+        properties = """
+        Radar Metrics:
+            range_resolution --> {range_resolution} [m]
+            max_range --> {max_range} [m]
+            min_range --> {min_range} [m]
+            speed_resolution --> {speed_resolution} [m/s]
+            max_speed --> {max_speed} [m/s]
+            frame_rate --> {frame_rate} [Hz]
+            adc_sample_rate_hz --> {adc_sample_rate_hz} [Hz]
+            bgt_tx_power --> {bgt_tx_power}
+            rx_antenna_number --> {rx_antenna_number}
+            if_gain_db --> {if_gain_db}
+            center_frequency --> {center_frequency} [Hz]
+            bandwidth --> {bandwidth} [Hz]
+        
+        Radar Configuration
+            num_samples_per_chirp --> {num_samples_per_chirp}
+            num_chirps_per_frame --> {num_chirps_per_frame}
+            adc_samplerate_Hz --> {adc_samplerate_Hz} [Hz]
+            frame_period_us --> {frame_period_us}
+            lower_frequency_kHz --> {lower_frequency_kHz} [kHz]
+            upper_frequency_kHz --> {upper_frequency_kHz} [kHz]
+            bgt_tx_power --> {bgt_tx_power}
+            rx_antenna_mask --> {rx_antenna_mask}
+            tx_mode --> {tx_mode}
+            chirp_to_chirp_time_100ps --> {chirp_to_chirp_time_100ps} [100ps]
+            if_gain_dB --> {if_gain_dB}
+            frame_end_delay_100ps --> {frame_end_delay_100ps} [100ps]
+            shape_end_delay_100ps --> {shape_end_delay_100ps} [100ps]
+        """.format(
+            **self.__config,
+            range_resolution=self.actual_max_range,
+            max_range=self.max_range,
+            min_range=self.min_range,
+            speed_resolution=self.speed_resolution,
+            max_speed=self.actual_max_velocity,
+            frame_rate=self.frame_rate,
+            adc_sample_rate_hz=self.adc_sample_rate_hz,
+            rx_antenna_number=self.rx_antenna_number,
+            if_gain_db=self.if_gain_db,
+            center_frequency=self.center_frequency,
+            bandwidth=self.bandwidth,
+        )
+        return properties
