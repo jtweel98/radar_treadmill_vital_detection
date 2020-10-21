@@ -172,8 +172,8 @@ class RadarMetrics:
             shape_end_delay_100ps --> {shape_end_delay_100ps} [100ps]
         """.format(
             **self.__config,
-            range_resolution=self.actual_max_range,
-            max_range=self.max_range,
+            range_resolution=self.range_resolution,
+            max_range=self.actual_max_range,
             min_range=self.min_range,
             speed_resolution=self.speed_resolution,
             max_speed=self.actual_max_velocity,

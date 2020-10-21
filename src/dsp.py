@@ -40,3 +40,7 @@ class DigitalSignalProcessor:
     def d_to_if(self, dis):
         S = self.radar_metrics.chirp_slope
         return S * 2.0 * dis / C
+    
+    def filter_min_distance(self, sig):
+        fc = self.d_to_if(self.radar_metrics.min_range)
+        return self.hp_filter_butterworth(sig, fc)

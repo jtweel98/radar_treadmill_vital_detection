@@ -14,8 +14,8 @@ class Radar:
     def next_frame_data(self, rx=0, raw=False):
         try:
             self.device.get_next_frame(self.frame)
-        except RadarSDKError:
-            print("ERR...")
+        except RadarSDKFifoOverflowError as e:
+            print(e)
             exit(1)
         
         # filter based on min distance
@@ -26,8 +26,8 @@ class Radar:
             for i in range(len(matrix)):
                 matrix[i] = dsp.decouple_dc(matrix[i])
                 matrix[i] = dsp.hp_filter_butterworth(matrix[i], fc)
-
-        return np.matrix(matrix)
+            return np.matrix(matrix)
+        return matrix
     
     def next_frame_data_average(self, rx=0, raw=False):
         matrix = np.matrix(self.next_frame_data(rx, raw))
